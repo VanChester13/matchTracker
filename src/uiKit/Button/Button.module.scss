@@ -1,0 +1,45 @@
+.btn {
+  display: flex;
+  align-items: center;
+  width: 204px;
+  height: 56px;
+  padding: 0 40px;
+  border-radius: 4px;
+  background-color: #eb0237;
+  cursor: pointer;
+  border: none;
+
+  span {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21.78px;
+  }
+
+  &:active {
+    background-color: #a01131;
+  }
+
+  &_disabled {
+    background-color: #701328;
+    span {
+      color: #787878;
+    }
+  }
+
+  @keyframes rotateAnimation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+
+  .iconRefresh {
+    margin: 0 0 0 10px;
+    &_rotate {
+      animation: rotateAnimation 2s linear infinite;
+    }
+  }
+}
